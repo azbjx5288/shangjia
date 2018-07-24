@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.1'
+    defaultConfig {
+        applicationId "com.bet365.bet365"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+/*support 强制使用相同版本的库*/
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.0.2'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:+'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation files('src/main/jniLibs/android-mastersdk-1.25.jar')
+    implementation files('src/main/jniLibs/android-async-http-1.4.8.jar')
+    implementation files('src/main/jniLibs/bugly_agent.jar')
+    implementation files('src/main/jniLibs/bugly_crash_release.jar')
+    implementation files('src/main/jniLibs/jpush-android-3.1.2.jar')
+    implementation files('src/main/jniLibs/jcore-android-1.2.0.jar')
+    implementation files('src/main/jniLibs/zxing.jar')
+    implementation files('src/main/jniLibs/org.apache.http.legacy.jar')
+    implementation project(':downloadtool')
+}

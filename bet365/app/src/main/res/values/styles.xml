@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- #region /设置全屏属性-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NetDisk" />
+
+    <style name="NetDisk.Unified" parent="@style/NetDisk" />
+
+    <style name="NetDisk.Unified.Smaller" parent="@style/NetDisk.Unified">
+        <item name="android:textSize">@dimen/text_size_smaller</item>
+    </style>
+
+    <style name="NetDisk.Unified.Smaller.Red2TabBarGray" parent="@style/NetDisk.Unified.Smaller">
+        <item name="android:textColor">@drawable/red_tabbargray_reverse_drawable</item>
+    </style>
+
+    <style name="NetDisk.Unified.Smaller.Blue2TabBarGray" parent="@style/NetDisk.Unified.Smaller">
+        <item name="android:textColor">@drawable/blue_tabbargray_reverse_drawable</item>
+    </style>
+
+</resources>
