@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\workspace\Android\code\GoldenMango\app\src\main\jniLibs"/></dataSet><dataSet config="pre"><source path="C:\workspace\Android\code\GoldenMango\app\src\pre\jniLibs"/></dataSet><dataSet config="release"><source path="C:\workspace\Android\code\GoldenMango\app\src\release\jniLibs"/></dataSet><dataSet config="preRelease"><source path="C:\workspace\Android\code\GoldenMango\app\src\preRelease\jniLibs"/></dataSet></merger>

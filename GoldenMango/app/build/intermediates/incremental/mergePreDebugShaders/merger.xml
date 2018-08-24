@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\workspace\Android\code\GoldenMango\app\src\main\shaders"/></dataSet><dataSet config="pre"><source path="C:\workspace\Android\code\GoldenMango\app\src\pre\shaders"/></dataSet><dataSet config="debug"><source path="C:\workspace\Android\code\GoldenMango\app\src\debug\shaders"/></dataSet><dataSet config="preDebug"><source path="C:\workspace\Android\code\GoldenMango\app\src\preDebug\shaders"/></dataSet></merger>
